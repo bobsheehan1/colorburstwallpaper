@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:frontalmind="http://frontalmind.com" >
+    <PreferenceCategory android:title="COLOR" >
+        <ListPreference
+            android:defaultValue="Blue"
+            android:dialogTitle="@string/color_preference"
+            android:entries="@array/entries_color_preference"
+            android:entryValues="@array/entryvalues_color_preference"
+            android:key="color_preference"
+            android:summary="@string/summary_color_preference"
+            android:title="@string/title_color_preference" />
+          <com.frontalmind.SeekBarPreference
+            android:defaultValue="64"
+            android:key="pref_fill_alpha"
+            android:max="255"
+            android:summary="@string/pref_fill_alpha_summ"
+            android:title="@string/pref_fill_alpha_title"
+            frontalmind:min="20"
+            frontalmind:unitsLeft=""
+            frontalmind:unitsRight="" />
+          <com.frontalmind.SeekBarPreference
+            android:defaultValue="128"
+            android:key="pref_stroke_alpha"
+            android:max="255"
+            android:summary="@string/pref_stroke_alpha_summ"
+            android:title="@string/pref_stroke_alpha_title"
+            frontalmind:min="20"
+            frontalmind:unitsLeft=""
+            frontalmind:unitsRight="" />
+          </PreferenceCategory>
+    <PreferenceCategory android:title="SHAPE" >
+        <ListPreference
+            android:defaultValue="hexagon"
+            android:dialogTitle="@string/pref_shape"
+            android:entries="@array/entries_shape_preference"
+            android:entryValues="@array/entryvalues_shape_preference"
+            android:key="pref_shape"
+            android:summary="@string/summary_shape_preference"
+            android:title="@string/title_shape_preference" />
+
+        <com.frontalmind.SeekBarPreference
+            android:defaultValue="50"
+            android:key="pref_block_size"
+            android:max="100"
+            android:summary="@string/pref_block_size_summ"
+            android:title="@string/pref_block_size_title"
+            frontalmind:min="20"
+            frontalmind:unitsLeft=""
+            frontalmind:unitsRight=" pixels" />
+        <com.frontalmind.SeekBarPreference
+            android:defaultValue="4"
+            android:key="pref_padding"
+            android:max="50"
+            android:summary="@string/pref_padding_summ"
+            android:title="@string/pref_padding_title"
+            frontalmind:min="0"
+            frontalmind:unitsLeft=""
+            frontalmind:unitsRight=" pixels" />
+        <com.frontalmind.SeekBarPreference
+            android:defaultValue="2"
+            android:key="pref_stroke_width"
+            android:max="50"
+            android:summary="@string/pref_stroke_width_summ"
+            android:title="@string/pref_stroke_width_title"
+            frontalmind:min="0"
+            frontalmind:unitsLeft=""
+            frontalmind:unitsRight=" pixels" />
+    </PreferenceCategory>
+
+        <PreferenceCategory android:title="SPEED" >
+    
+    <com.frontalmind.SeekBarPreference
+        android:defaultValue="100"
+        android:key="pref_rate"
+        android:max="500"
+        android:summary="@string/pref_rate_summ"
+        android:title="@string/pref_rate_title"
+        frontalmind:min="100"
+        frontalmind:unitsLeft=""
+        frontalmind:unitsRight=" msecs" />
+    <com.frontalmind.SeekBarPreference
+        android:defaultValue="8"
+        android:key="pref_decay"
+        android:max="64"
+        android:summary="@string/pref_decay_summ"
+        android:title="@string/pref_decay_title"
+        frontalmind:min="2"
+        frontalmind:unitsLeft=""
+        frontalmind:unitsRight=" steps" />
+    <com.frontalmind.SeekBarPreference
+        android:defaultValue="0"
+        android:key="pref_threshold"
+        android:max="255"
+        android:summary="@string/pref_threshold_summ"
+        android:title="@string/pref_threshold_title"
+        frontalmind:min="0"
+        frontalmind:unitsLeft=""
+        frontalmind:unitsRight="" />
+    </PreferenceCategory>
+</PreferenceScreen>

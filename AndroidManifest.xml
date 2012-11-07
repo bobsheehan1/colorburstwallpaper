@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.frontalmind.colorburst" 
+	android:versionCode="5"
+	android:versionName="1.11">
+	<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="15"/>
+	<uses-feature android:name="android.software.live_wallpaper"
+		android:required="true"></uses-feature>
+    
+ 	<application android:icon="@drawable/ic_launcher" android:label="@string/app_name">
+ 	    
+		<service android:name="MyWallpaperService" android:enabled="true"
+			android:permission="android.permission.BIND_WALLPAPER" android:label="@string/app_name">
+			    <intent-filter>
+				<action android:name="android.service.wallpaper.WallpaperService"></action>
+			</intent-filter>
+			<meta-data android:name="android.service.wallpaper"
+				android:resource="@xml/mywallpaper"></meta-data>
+		</service>
+		<activity android:label="@string/app_name" android:name=".MyPreferencesActivity"
+			android:theme="@android:style/Theme.WallpaperSettings"
+			android:exported="true">
+		</activity>
+	</application>
+</manifest> 
